@@ -84,6 +84,10 @@ implement this method to allow the occurrence order plugin to count correctly
 
 #### `getReference(moduleGraph)`
 
+<!-- YAML
+deprecated: true
+-->
+
 > Stability: 0 - Deprecated
 
 * `moduleGraph` {ModuleGraph}
@@ -251,6 +255,10 @@ implement this method to allow the occurrence order plugin to count correctly
 
 #### `getReference(moduleGraph)`
 
+<!-- YAML
+deprecated: true
+-->
+
 > Stability: 0 - Deprecated
 
 * `moduleGraph` {ModuleGraph}
@@ -393,6 +401,10 @@ implement this method to allow the occurrence order plugin to count correctly
 
 #### `getReference(moduleGraph)`
 
+<!-- YAML
+deprecated: true
+-->
+
 > Stability: 0 - Deprecated
 
 * `moduleGraph` {ModuleGraph}
@@ -528,6 +540,10 @@ Returns the exported names
 implement this method to allow the occurrence order plugin to count correctly
 
 #### `getReference(moduleGraph)`
+
+<!-- YAML
+deprecated: true
+-->
 
 > Stability: 0 - Deprecated
 

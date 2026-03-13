@@ -320,6 +320,10 @@ After this method has succeeded the cache can only be restored when build depend
 
 #### `getChunkMaps(realHash)`
 
+<!-- YAML
+deprecated: true
+-->
+
 > Stability: 0 - Deprecated
 
 * `realHash` {boolean}
@@ -915,6 +919,10 @@ After this method has succeeded the cache can only be restored when build depend
 
 #### Static method: `clearChunkGraphForChunk(chunk)`
 
+<!-- YAML
+deprecated: true
+-->
+
 > Stability: 0 - Deprecated
 
 * `chunk` {Chunk}
@@ -922,12 +930,20 @@ After this method has succeeded the cache can only be restored when build depend
 
 #### Static method: `clearChunkGraphForModule(module)`
 
+<!-- YAML
+deprecated: true
+-->
+
 > Stability: 0 - Deprecated
 
 * `module` {Module}
 * Returns: {void}
 
 #### Static method: `getChunkGraphForChunk(chunk, deprecateMessage, deprecationCode)`
+
+<!-- YAML
+deprecated: true
+-->
 
 > Stability: 0 - Deprecated
 
@@ -938,6 +954,10 @@ After this method has succeeded the cache can only be restored when build depend
 
 #### Static method: `getChunkGraphForModule(module, deprecateMessage, deprecationCode)`
 
+<!-- YAML
+deprecated: true
+-->
+
 > Stability: 0 - Deprecated
 
 * `module` {Module}
@@ -947,6 +967,10 @@ After this method has succeeded the cache can only be restored when build depend
 
 #### Static method: `setChunkGraphForChunk(chunk, chunkGraph)`
 
+<!-- YAML
+deprecated: true
+-->
+
 > Stability: 0 - Deprecated
 
 * `chunk` {Chunk}
@@ -954,6 +978,10 @@ After this method has succeeded the cache can only be restored when build depend
 * Returns: {void}
 
 #### Static method: `setChunkGraphForModule(module, chunkGraph)`
+
+<!-- YAML
+deprecated: true
+-->
 
 > Stability: 0 - Deprecated
 
@@ -1439,6 +1467,10 @@ If `module` is passed, `loc` and `request` must also be passed.
 * Returns: {void}
 
 #### `assignDepth(module)`
+
+<!-- YAML
+deprecated: true
+-->
 
 > Stability: 0 - Deprecated
 
@@ -2140,6 +2172,10 @@ Returns the exported names
 implement this method to allow the occurrence order plugin to count correctly
 
 #### `getReference(moduleGraph)`
+
+<!-- YAML
+deprecated: true
+-->
 
 > Stability: 0 - Deprecated
 
@@ -2975,6 +3011,10 @@ This data will be passed to restoreFromUnsafeCache later.
 
 #### `needRebuild(fileTimestamps, contextTimestamps)`
 
+<!-- YAML
+deprecated: true
+-->
+
 > Stability: 0 - Deprecated
 
 * `fileTimestamps` {Map}
@@ -3022,6 +3062,10 @@ restore unsafe cache data
 
 #### `source(dependencyTemplates, runtimeTemplate[, type])`
 
+<!-- YAML
+deprecated: true
+-->
+
 > Stability: 0 - Deprecated
 
 * `dependencyTemplates` {DependencyTemplates}
@@ -3046,7 +3090,16 @@ and properties.
 * `context` {UpdateHashContextDependency}
 * Returns: {void}
 
+#### Static method: `getCompilationHooks(compilation)`
+
+* `compilation` {Compilation}
+* Returns: {ExternalModuleHooks}
+
 #### Static method: `getSourceBasicTypes(module)`
+
+<!-- YAML
+deprecated: true
+-->
 
 > Stability: 0 - Deprecated
 
@@ -3259,6 +3312,10 @@ Apply the plugin
 * Returns: {ChunkChildOfTypeInOrder[]}
 
 #### `getChunkMaps(realHash)`
+
+<!-- YAML
+deprecated: true
+-->
 
 > Stability: 0 - Deprecated
 
@@ -3970,6 +4027,10 @@ This data will be passed to restoreFromUnsafeCache later.
 
 #### `needRebuild(fileTimestamps, contextTimestamps)`
 
+<!-- YAML
+deprecated: true
+-->
+
 > Stability: 0 - Deprecated
 
 * `fileTimestamps` {Map}
@@ -4009,6 +4070,10 @@ Use needBuild instead
 
 #### `source(dependencyTemplates, runtimeTemplate[, type])`
 
+<!-- YAML
+deprecated: true
+-->
+
 > Stability: 0 - Deprecated
 
 * `dependencyTemplates` {DependencyTemplates}
@@ -4034,6 +4099,10 @@ and properties.
 * Returns: {void}
 
 #### Static method: `getSourceBasicTypes(module)`
+
+<!-- YAML
+deprecated: true
+-->
 
 > Stability: 0 - Deprecated
 
@@ -4409,12 +4478,20 @@ In webpack 6, call getSourceBasicTypes() directly on the module instance instead
 
 #### Static method: `clearModuleGraphForModule(module)`
 
+<!-- YAML
+deprecated: true
+-->
+
 > Stability: 0 - Deprecated
 
 * `module` {Module}
 * Returns: {void}
 
 #### Static method: `getModuleGraphForModule(module, deprecateMessage, deprecationCode)`
+
+<!-- YAML
+deprecated: true
+-->
 
 > Stability: 0 - Deprecated
 
@@ -4424,6 +4501,10 @@ In webpack 6, call getSourceBasicTypes() directly on the module instance instead
 * Returns: {ModuleGraph}
 
 #### Static method: `setModuleGraphForModule(module, moduleGraph)`
+
+<!-- YAML
+deprecated: true
+-->
 
 > Stability: 0 - Deprecated
 
@@ -4546,6 +4627,10 @@ In webpack 6, call getSourceBasicTypes() directly on the module instance instead
 * Returns: {void}
 
 #### `runWithDependencies(compilers, fn, callback)`
+
+<!-- YAML
+deprecated: true
+-->
 
 > Stability: 0 - Deprecated
 
@@ -4964,6 +5049,10 @@ This data will be passed to restoreFromUnsafeCache later.
 
 #### `needRebuild(fileTimestamps, contextTimestamps)`
 
+<!-- YAML
+deprecated: true
+-->
+
 > Stability: 0 - Deprecated
 
 * `fileTimestamps` {Map}
@@ -5017,6 +5106,10 @@ restore unsafe cache data
 
 #### `source(dependencyTemplates, runtimeTemplate[, type])`
 
+<!-- YAML
+deprecated: true
+-->
+
 > Stability: 0 - Deprecated
 
 * `dependencyTemplates` {DependencyTemplates}
@@ -5052,6 +5145,10 @@ and properties.
 * Returns: {NormalModuleCompilationHooks}
 
 #### Static method: `getSourceBasicTypes(module)`
+
+<!-- YAML
+deprecated: true
+-->
 
 > Stability: 0 - Deprecated
 
@@ -5625,6 +5722,10 @@ This data will be passed to restoreFromUnsafeCache later.
 
 #### `needRebuild(fileTimestamps, contextTimestamps)`
 
+<!-- YAML
+deprecated: true
+-->
+
 > Stability: 0 - Deprecated
 
 * `fileTimestamps` {Map}
@@ -5668,6 +5769,10 @@ Use needBuild instead
 
 #### `source(dependencyTemplates, runtimeTemplate[, type])`
 
+<!-- YAML
+deprecated: true
+-->
+
 > Stability: 0 - Deprecated
 
 * `dependencyTemplates` {DependencyTemplates}
@@ -5693,6 +5798,10 @@ and properties.
 * Returns: {void}
 
 #### Static method: `getSourceBasicTypes(module)`
+
+<!-- YAML
+deprecated: true
+-->
 
 > Stability: 0 - Deprecated
 

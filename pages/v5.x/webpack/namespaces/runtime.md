@@ -317,6 +317,10 @@ This data will be passed to restoreFromUnsafeCache later.
 
 #### `needRebuild(fileTimestamps, contextTimestamps)`
 
+<!-- YAML
+deprecated: true
+-->
+
 > Stability: 0 - Deprecated
 
 * `fileTimestamps` {Map}
@@ -360,6 +364,10 @@ Use needBuild instead
 
 #### `source(dependencyTemplates, runtimeTemplate[, type])`
 
+<!-- YAML
+deprecated: true
+-->
+
 > Stability: 0 - Deprecated
 
 * `dependencyTemplates` {DependencyTemplates}
@@ -385,6 +393,10 @@ and properties.
 * Returns: {void}
 
 #### Static method: `getSourceBasicTypes(module)`
+
+<!-- YAML
+deprecated: true
+-->
 
 > Stability: 0 - Deprecated
 
@@ -705,6 +717,10 @@ This data will be passed to restoreFromUnsafeCache later.
 
 #### `needRebuild(fileTimestamps, contextTimestamps)`
 
+<!-- YAML
+deprecated: true
+-->
+
 > Stability: 0 - Deprecated
 
 * `fileTimestamps` {Map}
@@ -748,6 +764,10 @@ Use needBuild instead
 
 #### `source(dependencyTemplates, runtimeTemplate[, type])`
 
+<!-- YAML
+deprecated: true
+-->
+
 > Stability: 0 - Deprecated
 
 * `dependencyTemplates` {DependencyTemplates}
@@ -778,6 +798,10 @@ and properties.
 * Returns: {LoadScriptCompilationHooks}
 
 #### Static method: `getSourceBasicTypes(module)`
+
+<!-- YAML
+deprecated: true
+-->
 
 > Stability: 0 - Deprecated
 

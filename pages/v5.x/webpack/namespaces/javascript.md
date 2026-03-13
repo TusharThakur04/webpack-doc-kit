@@ -353,6 +353,10 @@ Block pre walking iterates the scope for block variable declarations
 
 #### `inScope(params, fn)`
 
+<!-- YAML
+deprecated: true
+-->
+
 > Stability: 0 - Deprecated
 
 * `params` {string|Identifier|Property|MemberExpression|ObjectPattern|ArrayPattern|RestElement|AssignmentPattern[]}

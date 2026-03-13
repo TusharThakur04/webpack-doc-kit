@@ -36,9 +36,12 @@ export default (ctx) => ({
       ? model.comment
       : model.comment || model.parent?.comment;
 
+    const yaml = ctx.helpers.yamlBlock(comment);
     const stability = ctx.helpers.stabilityBlockquote(comment);
 
     return [
+      yaml,
+      yaml && "",
       stability,
       stability && "",
       model.typeParameters?.length &&

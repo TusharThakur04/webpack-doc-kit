@@ -64,4 +64,13 @@ export default (ctx) => ({
 
     return null;
   },
+  yamlBlock(comment) {
+    if (!comment) return null;
+    const lines = [];
+    if (comment.blockTags?.find((t) => t.tag === "@deprecated")) {
+      lines.push("deprecated: true");
+    }
+    if (!lines.length) return null;
+    return `<!-- YAML\n${lines.join("\n")}\n-->`;
+  },
 });
