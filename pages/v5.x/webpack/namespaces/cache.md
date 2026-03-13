@@ -6,7 +6,6 @@
 
 #### Constructor
 
-0
 * Returns: {MemoryCachePlugin}
 
 ### Methods

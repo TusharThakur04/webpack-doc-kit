@@ -41,7 +41,6 @@
 
 #### `[iterator]()`
 
-0
 * Returns: {SetIterator}
 
 #### `add(item)`
@@ -56,7 +55,6 @@
 
 #### `clear()`
 
-0
 * Returns: {void}
 
 #### `delete(value)`
@@ -66,7 +64,6 @@
 
 #### `entries()`
 
-0
 * Returns: {SetIterator}
 
 #### `forEach(callbackFn, thisArg)`
@@ -85,7 +82,6 @@
 
 #### `keys()`
 
-0
 * Returns: {SetIterator}
 
 #### `serialize(__namedParameters)`
@@ -95,7 +91,6 @@
 
 #### `values()`
 
-0
 * Returns: {SetIterator}
 
 #### Static method: `deserialize(__namedParameters)`

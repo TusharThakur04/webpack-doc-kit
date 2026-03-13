@@ -77,7 +77,6 @@
 
 #### `couldAffectReferencingModule()`
 
-0
 * Returns: {boolean|TRANSITIVE}
 
 #### `createIgnoredModule(context)`
@@ -97,7 +96,6 @@
 
 #### `getContext()`
 
-0
 * Returns: {string}
 
 #### `getErrors(moduleGraph)`
@@ -121,7 +119,6 @@ Returns the exported names
 
 #### `getNumberOfIdOccurrences()`
 
-0
 * Returns: {number}
 
 implement this method to allow the occurrence order plugin to count correctly
@@ -145,7 +142,6 @@ Returns list of exports referenced by this dependency
 
 #### `getResourceIdentifier()`
 
-0
 * Returns: {string}
 
 #### `getWarnings(moduleGraph)`
@@ -266,7 +262,6 @@ Update the hash
 
 #### `couldAffectReferencingModule()`
 
-0
 * Returns: {boolean|TRANSITIVE}
 
 #### `createIgnoredModule(context)`
@@ -286,7 +281,6 @@ Update the hash
 
 #### `getContext()`
 
-0
 * Returns: {string}
 
 #### `getErrors(moduleGraph)`
@@ -333,7 +327,6 @@ Returns the exported names
 
 #### `getNumberOfIdOccurrences()`
 
-0
 * Returns: {number}
 
 implement this method to allow the occurrence order plugin to count correctly
@@ -357,7 +350,6 @@ Returns list of exports referenced by this dependency
 
 #### `getResourceIdentifier()`
 
-0
 * Returns: {string}
 
 #### `getWarnings(moduleGraph)`
@@ -476,7 +468,6 @@ Update the hash
 
 #### `couldAffectReferencingModule()`
 
-0
 * Returns: {boolean|TRANSITIVE}
 
 #### `createIgnoredModule(context)`
@@ -496,7 +487,6 @@ Update the hash
 
 #### `getContext()`
 
-0
 * Returns: {string}
 
 #### `getErrors(moduleGraph)`
@@ -520,7 +510,6 @@ Returns the exported names
 
 #### `getNumberOfIdOccurrences()`
 
-0
 * Returns: {number}
 
 implement this method to allow the occurrence order plugin to count correctly
@@ -544,7 +533,6 @@ Returns list of exports referenced by this dependency
 
 #### `getResourceIdentifier()`
 
-0
 * Returns: {string}
 
 #### `getWarnings(moduleGraph)`
@@ -596,7 +584,6 @@ Update the hash
 
 #### Constructor
 
-0
 * Returns: {NullDependency}
 
 ### Properties
@@ -658,7 +645,6 @@ Update the hash
 
 #### `couldAffectReferencingModule()`
 
-0
 * Returns: {boolean|TRANSITIVE}
 
 #### `createIgnoredModule(context)`
@@ -678,7 +664,6 @@ Update the hash
 
 #### `getContext()`
 
-0
 * Returns: {string}
 
 #### `getErrors(moduleGraph)`
@@ -702,7 +687,6 @@ Returns the exported names
 
 #### `getNumberOfIdOccurrences()`
 
-0
 * Returns: {number}
 
 implement this method to allow the occurrence order plugin to count correctly
@@ -726,7 +710,6 @@ Returns list of exports referenced by this dependency
 
 #### `getResourceIdentifier()`
 
-0
 * Returns: {string}
 
 #### `getWarnings(moduleGraph)`

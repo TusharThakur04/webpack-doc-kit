@@ -61,7 +61,7 @@ export default (ctx) => ({
           showTags: false,
         }),
     ]
-      .filter((x) => x !== null && x !== undefined && x !== false)
+      .filter((x) => typeof x === "string" || Boolean(x))
       .join("\n");
   },
 

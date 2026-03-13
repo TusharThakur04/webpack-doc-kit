@@ -57,7 +57,6 @@
 
 #### `keys()`
 
-0
 * Returns: {RuntimeSpec[]}
 
 #### `provide(runtime, computer)`
@@ -80,7 +79,6 @@
 
 #### `values()`
 
-0
 * Returns: {IterableIterator}
 
 ***
@@ -110,7 +108,6 @@
 
 #### `[iterator]()`
 
-0
 * Returns: {IterableIterator}
 
 #### `add(runtime)`

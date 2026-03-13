@@ -295,21 +295,18 @@ This is used for when a Module has a AsyncDependencyBlock tie (for code-splittin
 
 #### `cleanupForCache()`
 
-0
 * Returns: {void}
 
 Assuming this module is in the cache. Remove internal references to allow freeing some memory.
 
 #### `clearDependenciesAndBlocks()`
 
-0
 * Returns: {void}
 
 Removes all dependencies and blocks
 
 #### `clearWarningsAndErrors()`
 
-0
 * Returns: {void}
 
 removes all warnings and errors
@@ -326,12 +323,10 @@ removes all warnings and errors
 
 #### `generate()`
 
-0
 * Returns: {string}
 
 #### `getChunks()`
 
-0
 * Returns: {Chunk[]}
 
 #### `getConcatenationBailoutReason(context)`
@@ -341,7 +336,6 @@ removes all warnings and errors
 
 #### `getErrors()`
 
-0
 * Returns: {Iterable}
 
 #### `getExportsType(moduleGraph[, strict])`
@@ -352,27 +346,22 @@ removes all warnings and errors
 
 #### `getGeneratedCode()`
 
-0
 * Returns: {string}
 
 #### `getNumberOfChunks()`
 
-0
 * Returns: {number}
 
 #### `getNumberOfErrors()`
 
-0
 * Returns: {number}
 
 #### `getNumberOfWarnings()`
 
-0
 * Returns: {number}
 
 #### `getRootBlock()`
 
-0
 * Returns: {DependenciesBlock}
 
 #### `getSideEffectsConnectionState(moduleGraph)`
@@ -382,7 +371,6 @@ removes all warnings and errors
 
 #### `getSourceBasicTypes()`
 
-0
 * Returns: {ReadonlySet}
 
 Basic source types are high-level categories like javascript, css, webassembly, etc.
@@ -393,12 +381,10 @@ from getSourceTypes(), but their generated output is still JavaScript, i.e. thei
 
 #### `getSourceTypes()`
 
-0
 * Returns: {ReadonlySet}
 
 #### `getUnsafeCacheData()`
 
-0
 * Returns: {UnsafeCacheData}
 
 Module should be unsafe cached. Get data that's needed for that.
@@ -406,12 +392,10 @@ This data will be passed to restoreFromUnsafeCache later.
 
 #### `getWarnings()`
 
-0
 * Returns: {Iterable}
 
 #### `hasChunkCondition()`
 
-0
 * Returns: {boolean}
 
 #### `hasReasonForChunk(chunk, moduleGraph, chunkGraph)`
@@ -429,12 +413,10 @@ This data will be passed to restoreFromUnsafeCache later.
 
 #### `identifier()`
 
-0
 * Returns: {string}
 
 #### `invalidateBuild()`
 
-0
 * Returns: {void}
 
 #### `isAccessibleInChunk(chunkGraph, chunk[, ignoreChunk])`
@@ -453,7 +435,6 @@ This data will be passed to restoreFromUnsafeCache later.
 
 #### `isEntryModule()`
 
-0
 * Returns: {boolean}
 
 #### `isInChunk(chunk)`
@@ -478,7 +459,6 @@ This data will be passed to restoreFromUnsafeCache later.
 
 #### `nameForCondition()`
 
-0
 * Returns: {string}
 
 #### `needBuild(context, callback)`
@@ -499,7 +479,6 @@ Use needBuild instead
 
 #### `originalSource()`
 
-0
 * Returns: {Source}
 
 #### `readableIdentifier(requestShortener)`
@@ -524,7 +503,6 @@ Use needBuild instead
 
 #### `shouldIsolate()`
 
-0
 * Returns: {boolean}
 
 #### `size([type])`
@@ -580,7 +558,6 @@ In webpack 6, call getSourceBasicTypes() directly on the module instance instead
 
 #### Constructor
 
-0
 * Returns: {FetchCompileAsyncWasmPlugin}
 
 ### Methods
@@ -913,21 +890,18 @@ This is used for when a Module has a AsyncDependencyBlock tie (for code-splittin
 
 #### `cleanupForCache()`
 
-0
 * Returns: {void}
 
 Assuming this module is in the cache. Remove internal references to allow freeing some memory.
 
 #### `clearDependenciesAndBlocks()`
 
-0
 * Returns: {void}
 
 Removes all dependencies and blocks
 
 #### `clearWarningsAndErrors()`
 
-0
 * Returns: {void}
 
 removes all warnings and errors
@@ -944,12 +918,10 @@ removes all warnings and errors
 
 #### `generate()`
 
-0
 * Returns: {string}
 
 #### `getChunks()`
 
-0
 * Returns: {Chunk[]}
 
 #### `getConcatenationBailoutReason(context)`
@@ -959,7 +931,6 @@ removes all warnings and errors
 
 #### `getErrors()`
 
-0
 * Returns: {Iterable}
 
 #### `getExportsType(moduleGraph[, strict])`
@@ -970,27 +941,22 @@ removes all warnings and errors
 
 #### `getGeneratedCode()`
 
-0
 * Returns: {string}
 
 #### `getNumberOfChunks()`
 
-0
 * Returns: {number}
 
 #### `getNumberOfErrors()`
 
-0
 * Returns: {number}
 
 #### `getNumberOfWarnings()`
 
-0
 * Returns: {number}
 
 #### `getRootBlock()`
 
-0
 * Returns: {DependenciesBlock}
 
 #### `getSideEffectsConnectionState(moduleGraph)`
@@ -1000,7 +966,6 @@ removes all warnings and errors
 
 #### `getSourceBasicTypes()`
 
-0
 * Returns: {ReadonlySet}
 
 Basic source types are high-level categories like javascript, css, webassembly, etc.
@@ -1011,12 +976,10 @@ from getSourceTypes(), but their generated output is still JavaScript, i.e. thei
 
 #### `getSourceTypes()`
 
-0
 * Returns: {ReadonlySet}
 
 #### `getUnsafeCacheData()`
 
-0
 * Returns: {UnsafeCacheData}
 
 Module should be unsafe cached. Get data that's needed for that.
@@ -1024,12 +987,10 @@ This data will be passed to restoreFromUnsafeCache later.
 
 #### `getWarnings()`
 
-0
 * Returns: {Iterable}
 
 #### `hasChunkCondition()`
 
-0
 * Returns: {boolean}
 
 #### `hasReasonForChunk(chunk, moduleGraph, chunkGraph)`
@@ -1047,12 +1008,10 @@ This data will be passed to restoreFromUnsafeCache later.
 
 #### `identifier()`
 
-0
 * Returns: {string}
 
 #### `invalidateBuild()`
 
-0
 * Returns: {void}
 
 #### `isAccessibleInChunk(chunkGraph, chunk[, ignoreChunk])`
@@ -1071,7 +1030,6 @@ This data will be passed to restoreFromUnsafeCache later.
 
 #### `isEntryModule()`
 
-0
 * Returns: {boolean}
 
 #### `isInChunk(chunk)`
@@ -1096,7 +1054,6 @@ This data will be passed to restoreFromUnsafeCache later.
 
 #### `nameForCondition()`
 
-0
 * Returns: {string}
 
 #### `needBuild(context, callback)`
@@ -1117,7 +1074,6 @@ Use needBuild instead
 
 #### `originalSource()`
 
-0
 * Returns: {Source}
 
 #### `readableIdentifier(requestShortener)`
@@ -1142,7 +1098,6 @@ Use needBuild instead
 
 #### `shouldIsolate()`
 
-0
 * Returns: {boolean}
 
 #### `size([type])`
@@ -1198,7 +1153,6 @@ In webpack 6, call getSourceBasicTypes() directly on the module instance instead
 
 #### Constructor
 
-0
 * Returns: {JsonpTemplatePlugin}
 
 ### Methods
