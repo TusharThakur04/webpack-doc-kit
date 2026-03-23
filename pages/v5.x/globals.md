@@ -3046,11 +3046,6 @@ and properties.
 * `context` {UpdateHashContextDependency}
 * Returns: {void}
 
-#### Static method: `getCompilationHooks(compilation)`
-
-* `compilation` {Compilation}
-* Returns: {ExternalModuleHooks}
-
 #### Static method: `getSourceBasicTypes(module)`
 
 > Stability: 0 - Deprecated

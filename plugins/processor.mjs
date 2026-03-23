@@ -37,12 +37,12 @@ export function load(app) {
 
   app.renderer.on(Renderer.EVENT_END, () => {
     const typeMap = Object.fromEntries(
-      app.renderer.router
-        .getLinkTargets()
-        .map(target => [
-          target.getFullName(),
-          app.renderer.router.getAnchoredURL(target),
-        ])
+      app.renderer.router.getLinkTargets().map(target => {
+        const fullUrl = app.renderer.router
+          .getFullUrl(target)
+          .replace('.md', '.html');
+        return [target.getFullName(), fullUrl];
+      })
     );
 
     writeFileSync(
