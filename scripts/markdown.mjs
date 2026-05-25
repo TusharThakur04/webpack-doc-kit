@@ -9,20 +9,24 @@ const app = await Application.bootstrapWithPlugins({
   // Plugins
   plugin: [
     'typedoc-plugin-markdown',
-    './plugins/processor.mjs',
+    './plugins/processor/index.mjs',
     './plugins/theme/index.mjs',
   ],
   theme: 'doc-kit',
   router: 'doc-kit',
+  publicPath: '/',
 
   // Formatting
   hideGroupHeadings: true,
   hideBreadcrumbs: true,
   hidePageHeader: true,
+  readme: 'none',
   disableSources: true,
   propertiesFormat: 'table',
+  membersWithOwnFile: ['Class'],
 
   modulesFileName: 'index',
+  entryFileName: 'index',
   tsconfig: 'tsconfig.json',
 });
 
