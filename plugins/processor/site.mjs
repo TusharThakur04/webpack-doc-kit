@@ -10,9 +10,10 @@ const getFirstAtxHeading = text => text.match(/^#\s+(.+)$/m)?.[1]?.trim();
 
 const getFirstPathSegment = url => url.replace(/^\//, '').split('/')[0];
 
-const toSidebarLink = url => {
+const toSidebarLink = (url, basePath) => {
   const path = url.replace(/\.md$/, '').replace(/\/index$/, '');
-  return path ? `/${path}` : '/';
+  const prefix = basePath ? `/${basePath.replace(/^\/|\/$/g, '')}` : '';
+  return path ? `${prefix}/${path}` : prefix || '/';
 };
 
 const defaultLabelFor = (target, url) => {
@@ -29,7 +30,7 @@ const isSidebarTarget = (router, target) => {
   return url.endsWith('.md') && !url.includes('#');
 };
 
-export const sidebar = router => {
+export const sidebar = (router, basePath) => {
   const categories = new Map();
   const seen = new Set();
 
@@ -58,7 +59,7 @@ export const sidebar = router => {
     };
 
     group.items.push({
-      link: toSidebarLink(url),
+      link: toSidebarLink(url, basePath),
       label,
     });
 

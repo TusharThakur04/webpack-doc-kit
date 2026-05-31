@@ -12,9 +12,8 @@ import { categoryForReflection } from '../shared/categories.mjs';
  * @param {import('typedoc-plugin-markdown').MarkdownApplication} app
  */
 export function load(app) {
-  // Keep router ownership in the processor plugin because routing depends on
-  // source metadata and the synthetic type pages created during conversion.
   app.renderer.defineRouter('doc-kit', DocKitRouter);
+  app.options.addDeclaration({ name: 'base' });
 
   app.converter.on(Converter.EVENT_RESOLVE_BEGIN, context => {
     // doc-kit has property metadata, not TypeDoc accessor metadata.
@@ -78,7 +77,7 @@ export function load(app) {
       join(app.options.getValue('out'), 'site.json'),
       JSON.stringify(
         {
-          sidebar: sidebar(app.renderer.router),
+          sidebar: sidebar(app.renderer.router, app.options.getValue('base')),
         },
         null,
         2
