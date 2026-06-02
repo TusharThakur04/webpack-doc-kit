@@ -7,11 +7,6 @@ on:
         description: 'Release tag (e.g. v5.99.0)'
         required: true
         type: string
-      commit:
-        description: 'Target commit SHA or branch'
-        required: true
-        type: string
-
 permissions:
   contents: write
   pull-requests: write
@@ -21,7 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TAG: ${{ inputs.tag }}
-      COMMIT: ${{ inputs.commit }}
 
     steps:
       - name: Checkout
@@ -40,8 +34,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          node scripts/update-versions.mjs "$TAG" 
-          echo "$COMMIT" > HEAD_COMMIT
+          node scripts/update-versions.mjs "$TAG"
 
       - name: Open pull request
         uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
@@ -50,6 +43,6 @@ jobs:
           commit-message: 'chore: sync to webpack@${{ env.TAG }}'
           title: 'chore: sync to webpack@${{ env.TAG }}'
           body: |
-            Automated version sync triggered by the `${{ env.TAG }}` release of `${{ env.COMMIT }}`.
+            Automated version sync triggered by the `${{ env.TAG }}` webpack release.
           branch: 'update-versions'
           draft: true
