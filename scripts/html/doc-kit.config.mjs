@@ -2,6 +2,8 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { major } from 'semver';
 
+import createTailwindReader from './tailwind.mjs';
+
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 
 const VERSION = process.env.VERSION;
@@ -48,6 +50,11 @@ export default {
       '#theme/Navigation': join(ROOT, 'components/NavBar.jsx'),
       '#theme/Footer': join(ROOT, 'components/Footer/index.jsx'),
       '#theme/Logo': join(ROOT, 'components/WebpackLogo/Icon.jsx'),
+    },
+    lightningcss: {
+      resolver: {
+        read: createTailwindReader(),
+      },
     },
   },
 };
