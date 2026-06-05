@@ -33,7 +33,7 @@
 }
 
 .heading {
-  @apply m-0 text-xs font-semibold tracking-[0.08em] uppercase text-green-300;
+  @apply m-0 text-xs font-semibold tracking-[0.08em] uppercase text-blue-300;
 }
 
 .list {
@@ -41,7 +41,7 @@
 }
 
 .link {
-  @apply text-[0.9375rem] text-neutral-300 no-underline transition-colors duration-150 ease-in-out hover:text-green-300;
+  @apply text-[0.9375rem] text-neutral-300 no-underline transition-colors duration-150 ease-in-out hover:text-blue-300;
 }
 
 .bottom {
