@@ -1,6 +1,13 @@
 import { execFile } from 'node:child_process';
-import { readFile } from 'node:fs/promises';
+import { readFile, cp } from 'node:fs/promises';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { promisify } from 'node:util';
+
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
+
+const ASSETS_SOURCE = join(ROOT, 'assets');
+const ASSETS_DESTINATION = join(ROOT, 'out/assets');
 
 const execFileAsync = promisify(execFile);
 
@@ -35,3 +42,7 @@ for (const version of versions) {
   await runDocKit(version);
 }
 await runDocKit();
+
+// copy assets folder to the out directory
+
+await cp(ASSETS_SOURCE, ASSETS_DESTINATION, { recursive: true });
