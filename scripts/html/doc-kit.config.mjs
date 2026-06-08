@@ -11,6 +11,10 @@ const MAJOR_VERSION = VERSION ? `v${major(VERSION)}.x` : undefined;
 
 const inputDir = VERSION ? `./pages/api/${MAJOR_VERSION}` : './pages';
 
+const BASE_URL = process.env.VERCEL_URL
+  ? `https://${process.env.VERCEL_URL}`
+  : 'http://localhost:3000';
+
 /**
  * Configuration for @node-core/doc-kit when generating webpack API docs.
  *
@@ -23,9 +27,7 @@ export default {
     input: [`${inputDir}/**/*.md`],
     ignore: VERSION ? [] : ['./pages/api/**/*.md'],
     output: VERSION ? `./out/api/${MAJOR_VERSION}` : './out',
-    baseURL: process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : 'http://localhost:3000',
+    baseURL: BASE_URL,
   },
   threads: 1,
   metadata: {
@@ -39,6 +41,26 @@ export default {
     project: 'webpack',
     useAbsoluteURLs: true,
     remoteConfigUrl: null,
+    title: VERSION ? `Webpack ${MAJOR_VERSION} Documentation` : 'Webpack',
+    head: {
+      meta: [
+        {
+          name: 'description',
+          content:
+            'Webpack is the build tool for modern web applications run on NodeJS. Webpack is a module bundler and its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset.',
+        },
+        {
+          property: 'og:image',
+          content: `${BASE_URL}/assets/og_preview.png`,
+        },
+      ],
+      links: [
+        {
+          rel: 'icon',
+          href: '/assets/favicon.ico',
+        },
+      ],
+    },
     imports: {
       '#theme/local/site': join(ROOT, inputDir, 'site.json'),
 
