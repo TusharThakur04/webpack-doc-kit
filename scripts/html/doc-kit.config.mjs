@@ -62,10 +62,12 @@ export default {
       ],
     },
     imports: {
-      '#theme/local/site': join(ROOT, inputDir, 'site.json'),
+      '#theme/local/site': VERSION
+        ? join(ROOT, inputDir, 'site.json')
+        : join(ROOT, 'pages/site.mjs'),
+      '#theme/site': join(ROOT, 'pages/site.mjs'),
 
       '#theme/Sidebar': join(ROOT, 'components/SideBar.jsx'),
-      '#theme/site': join(ROOT, 'pages/site.json'),
       '#theme/Layout': join(ROOT, 'components/Layout.jsx'),
       '#theme/Navigation': join(ROOT, 'components/NavBar.jsx'),
       '#theme/Footer': join(ROOT, 'components/Footer/index.jsx'),
