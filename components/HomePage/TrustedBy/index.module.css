@@ -1,0 +1,55 @@
+@reference "../../../styles/index.css";
+
+.trustedSection {
+  @apply flex
+    w-full
+    justify-center
+    py-16
+    border-t
+    text-neutral-500
+    dark:text-neutral-300
+    border-neutral-200
+    dark:border-neutral-800;
+}
+
+.container {
+  @apply flex
+    w-[80%]
+    max-w-7xl
+    flex-col
+    items-center
+    justify-center
+    gap-8;
+}
+
+.label {
+  @apply text-sm
+    font-normal
+    hover:text-neutral-600
+    dark:hover:text-neutral-200;
+}
+
+.logoGrid {
+  @apply flex
+    w-full
+    flex-wrap
+    items-center
+    justify-center
+    gap-8
+    md:gap-16
+    lg:gap-24;
+}
+
+.logoItem {
+  @apply flex
+    items-center
+    justify-center
+    hover:text-neutral-600
+    dark:hover:text-neutral-200;
+}
+
+.companyName {
+  @apply text-base
+    font-medium
+    tracking-tight;
+}

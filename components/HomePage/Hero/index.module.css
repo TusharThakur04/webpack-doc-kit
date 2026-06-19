@@ -1,0 +1,194 @@
+@reference "../../../styles/index.css";
+
+.hero {
+  @apply flex
+    w-full
+    flex-col
+    items-center
+    pt-20;
+}
+
+.webpackContainer {
+  @apply flex
+    justify-center
+    w-full
+    border-b
+    border-neutral-200
+    dark:border-neutral-800;
+}
+
+.webpack {
+  @apply pb-20
+    flex
+    max-w-6xl
+    w-[75%]
+    flex-col
+    items-center
+    justify-between
+    gap-16
+    text-center
+    lg:flex-row
+    lg:gap-10
+    lg:text-left;
+}
+
+.description {
+  @apply w-full
+    max-w-full
+    flex-1
+    lg:max-w-[520px];
+}
+
+.preTitle {
+  @apply mb-4
+    flex
+    items-center
+    justify-center
+    text-[0.85rem]
+    font-normal
+    uppercase
+    tracking-wider
+    text-blue-600
+    dark:text-blue-500
+    lg:justify-start;
+}
+
+.dot {
+  @apply mr-2
+    inline-block
+    h-1.5
+    w-1.5
+    rounded-full
+    bg-blue-600
+    dark:bg-blue-500;
+}
+
+.title {
+  @apply mb-4
+    font-normal
+    text-5xl
+    leading-[1.1]
+    md:text-6xl;
+}
+
+.highlight {
+  @apply text-blue-600
+    dark:text-blue-500;
+}
+
+.subtext {
+  @apply mb-8
+    text-lg
+    leading-relaxed
+    text-neutral-800
+    dark:text-neutral-500;
+}
+
+.actions {
+  @apply flex
+    items-center
+    justify-center
+    gap-4
+    lg:justify-start;
+}
+
+.primaryBtn {
+  @apply inline-flex
+    items-center
+    justify-center
+    rounded
+    border
+    border-blue-700
+    bg-blue-600
+    dark:bg-blue-500
+    px-5
+    py-3
+    text-sm
+    font-medium
+    text-white
+    transition-colors
+    duration-200
+    hover:bg-blue-700
+    dark:hover:bg-blue-400;
+}
+
+.arrowIcon {
+  @apply ml-2
+    h-5
+    w-5
+    transition-transform
+    duration-200
+    group-hover:translate-x-1;
+}
+
+.primaryBtn:hover .arrowIcon {
+  @apply translate-x-1;
+}
+
+.secondaryBtn {
+  @apply inline-flex
+    items-center
+    justify-center
+    rounded
+    border
+    border-[#d1d9e0]
+    bg-white
+    px-5
+    py-3
+    text-sm
+    font-medium
+    text-[#2c3e50]
+    transition-colors
+    duration-200
+    hover:border-[#b5c0cb]
+    hover:bg-[#f8f9fa];
+}
+
+.githubIcon {
+  @apply ml-2
+    h-4
+    w-4;
+}
+
+.logo {
+  @apply flex
+    flex-1
+    items-center
+    justify-center
+    lg:justify-end;
+}
+
+.cubeImage {
+  @apply aspect-square
+    w-75
+    lg:w-95
+    max-w-full
+    object-contain;
+}
+
+.stats {
+  @apply flex
+    w-[90%]
+    max-w-350
+    flex-col
+    items-center
+    justify-center
+    gap-6
+    py-6
+    text-center
+    dark:border-neutral-800
+    lg:flex-row
+    lg:justify-around
+    lg:gap-0;
+}
+
+.statItem h2 {
+  @apply text-3xl
+    font-medium;
+}
+
+.statItem p {
+  @apply text-sm
+    text-neutral-800
+    dark:text-neutral-500;
+}
