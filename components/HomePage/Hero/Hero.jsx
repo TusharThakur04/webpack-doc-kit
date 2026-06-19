@@ -1,7 +1,7 @@
 import styles from './index.module.css';
-import pkg from '../../../package.json';
+import { version } from '#theme/config';
+import WebpackSVG from '../../Icons/WebpackSVG';
 export default function Hero() {
-  const webpackVersion = pkg.dependencies.webpack.replace(/[\^~]/g, '');
   return (
     <section className={styles.hero}>
       <div className={styles.webpackContainer}>
@@ -60,13 +60,7 @@ export default function Hero() {
           </div>
 
           <div className={styles.logo}>
-            <img
-              src="/assets/logo.svg"
-              alt="Webpack Cube Logo"
-              className={styles.cubeImage}
-              width="370"
-              height="370"
-            />
+            <WebpackSVG className={styles.webpackLogo} />
           </div>
         </div>
       </div>
@@ -85,7 +79,7 @@ export default function Hero() {
           <p>plugins published</p>
         </div>
         <div className={styles.statItem}>
-          <h2>{`v${webpackVersion}`}</h2>
+          <h2>{`v${version.version}`}</h2>
           <p>current release</p>
         </div>
       </div>

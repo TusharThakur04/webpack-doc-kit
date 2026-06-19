@@ -22,23 +22,40 @@ export default function ConfigSection() {
 
   const mjsCode = `// webpack.config.mjs
     import path from 'path';
-    import { fileURLToPath } from 'url';
-    
-    const __dirname = path.dirname(fileURLToPath(import.meta.url));
     
     export default {
       entry: './src/index.js',
       output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(import.meta.dirname, 'dist')
       },
       mode: 'production'
     };`;
 
+  const tsCode = `// webpack.config.ts
+import path from 'path';
+import { Configuration } from 'webpack';
+
+const config: Configuration = {
+  entry: './src/index.ts',
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist')
+  },
+  mode: 'production'
+};
+
+export default config;`;
+
   const [isCopied, setIsCopied] = useState(false);
 
   const handleCopy = async () => {
-    const textToCopy = activeSyntax === 'js' ? jsCode : mjsCode;
+    const textToCopy =
+      activeSyntax === 'js'
+        ? jsCode
+        : activeSyntax === 'mjs'
+          ? mjsCode
+          : tsCode;
 
     try {
       await navigator.clipboard.writeText(textToCopy);
@@ -91,11 +108,20 @@ export default function ConfigSection() {
               >
                 webpack.config.mjs
               </button>
+              <button
+                onClick={() => setActiveSyntax('ts')}
+                className={
+                  activeSyntax === 'ts' ? styles.activeTab : styles.inactiveTab
+                }
+              >
+                webpack.config.ts
+              </button>
             </div>
 
             <div className={styles.codeBody}>
+              jsx
               <SyntaxHighlighter
-                language="javascript"
+                language={activeSyntax === 'ts' ? 'typescript' : 'javascript'}
                 style={vscDarkPlus}
                 customStyle={{
                   backgroundColor: 'transparent',
@@ -103,7 +129,11 @@ export default function ConfigSection() {
                   padding: 0,
                 }}
               >
-                {activeSyntax === 'js' ? jsCode : mjsCode}
+                {activeSyntax === 'js'
+                  ? jsCode
+                  : activeSyntax === 'mjs'
+                    ? mjsCode
+                    : tsCode}
               </SyntaxHighlighter>
             </div>
 
