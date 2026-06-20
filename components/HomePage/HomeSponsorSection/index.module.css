@@ -1,0 +1,130 @@
+@reference "../../../styles/index.css";
+
+.section {
+  @apply bg-white
+    py-16
+    lg:py-20
+    dark:bg-neutral-950
+    border-t
+    border-neutral-200
+    dark:border-neutral-800;
+}
+
+.container {
+  @apply mx-auto
+    max-w-7xl
+    px-6;
+}
+
+.tiers {
+  @apply mt-12
+    flex
+    flex-col
+    gap-10;
+}
+
+.tierWrapper {
+  @apply flex
+    flex-col
+    gap-0;
+}
+
+.platinumStage {
+  @apply rounded-2xl
+    px-6
+    py-8;
+
+  /* blue-50 (#eff6ff) at 50% opacity */
+  background: radial-gradient(
+    ellipse 80% 60% at 50% 0%,
+    rgb(239 246 255 / 50%) 0%,
+    transparent 100%
+  );
+}
+
+:global(.dark) .platinumStage {
+  /* blue-950 (#172554) at 30% opacity */
+  background: radial-gradient(
+    ellipse 80% 60% at 50% 0%,
+    rgb(23 37 84 / 30%) 0%,
+    transparent 100%
+  );
+}
+
+.seeMore {
+  @apply flex
+    items-center
+    justify-center
+    gap-2
+    mt-4;
+}
+
+.dots {
+  @apply select-none
+    tracking-widest
+    text-neutral-300
+    dark:text-neutral-600;
+}
+
+.seeMoreLink {
+  @apply text-sm
+    font-medium
+    text-blue-600
+    no-underline
+    transition-colors
+    duration-150
+    hover:text-blue-700
+    dark:text-blue-400
+    dark:hover:text-blue-300;
+}
+
+.backersSection {
+  @apply mt-14
+    border-t
+    border-neutral-100
+    pt-10
+    dark:border-neutral-800;
+}
+
+.backersLabel {
+  @apply mb-6
+    text-center
+    text-xs
+    font-semibold
+    uppercase
+    tracking-widest
+    text-neutral-400
+    dark:text-neutral-500;
+}
+
+.backerWall {
+  @apply flex
+    flex-wrap
+    justify-center
+    gap-2;
+}
+
+.backerSeeMore {
+  @apply mt-5;
+}
+
+.actions {
+  @apply mt-10
+    flex
+    flex-wrap
+    items-center
+    justify-center
+    gap-4;
+}
+
+.allSponsorsLink {
+  @apply text-sm
+    font-medium
+    text-blue-600
+    no-underline
+    transition-colors
+    duration-150
+    hover:text-blue-700
+    dark:text-blue-400
+    dark:hover:text-blue-300;
+}
