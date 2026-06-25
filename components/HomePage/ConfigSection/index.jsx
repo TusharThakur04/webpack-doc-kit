@@ -23,8 +23,7 @@ export default function ConfigSection({ children }) {
 
         <div className={styles.configGrid}>
           {/* rendering the code block */}
-          <div className={styles.codeBody}>{children}</div>
-
+          {children}
           <div className={styles.features}>
             <h3 className={styles.featuresTitle}>Loaders for any input</h3>
             <p className={styles.featuresText}>
