@@ -67,6 +67,12 @@ export default {
         },
       ],
     },
+    components: {
+      Hero: '#theme/Hero',
+      ConfigSection: '#theme/ConfigSection',
+      FeaturesSection: '#theme/FeaturesSection',
+      HomeSponsorSection: '#theme/HomeSponsorSection',
+    },
     imports: {
       '#theme/local/site': VERSION
         ? join(ROOT, INPUT_DIR, 'site.json')
@@ -81,6 +87,20 @@ export default {
       '#theme/Navigation': join(ROOT, 'components/NavBar.jsx'),
       '#theme/Footer': join(ROOT, 'components/Footer/index.jsx'),
       '#theme/Logo': join(ROOT, 'components/Icons/Webpack.jsx'),
+
+      '#theme/Hero': join(ROOT, 'components/HomePage/Hero/index.jsx'),
+      '#theme/ConfigSection': join(
+        ROOT,
+        'components/HomePage/ConfigSection/index.jsx'
+      ),
+      '#theme/FeaturesSection': join(
+        ROOT,
+        'components/HomePage/FeaturesSection/index.jsx'
+      ),
+      '#theme/HomeSponsorSection': join(
+        ROOT,
+        'components/HomePage/HomeSponsorSection/index.jsx'
+      ),
     },
     lightningcss: {
       resolver: {
