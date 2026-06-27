@@ -6,7 +6,7 @@ import createTailwindReader from './tailwind.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 
-const VERSION = undefined;
+const VERSION = process.env.VERSION;
 const MAJOR_VERSION = VERSION ? `v${major(VERSION)}.x` : undefined;
 const URL_PATH = VERSION ? `/docs/api/${MAJOR_VERSION}` : '/';
 
@@ -67,9 +67,6 @@ export default {
         },
       ],
     },
-    components: {
-      ConfigCodeBlock: '#theme/ConfigCodeBlock',
-    },
     imports: {
       '#theme/local/site': VERSION
         ? join(ROOT, INPUT_DIR, 'site.json')
@@ -84,10 +81,6 @@ export default {
       '#theme/Navigation': join(ROOT, 'components/NavBar.jsx'),
       '#theme/Footer': join(ROOT, 'components/Footer/index.jsx'),
       '#theme/Logo': join(ROOT, 'components/Icons/Webpack.jsx'),
-      '#theme/ConfigCodeBlock': join(
-        ROOT,
-        'components/HomePage/ConfigCodeBlock/index.jsx'
-      ),
     },
     lightningcss: {
       resolver: {

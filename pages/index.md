@@ -3,19 +3,17 @@ layout: home
 mdx: true
 ---
 
-<ConfigCodeBlock>
-
 ```javascript displayName="webpack.config.js"
 // webpack.config.js
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-  },
-  mode: 'production',
+entry: './src/index.js',
+output: {
+filename: 'bundle.js',
+path: path.resolve(\_\_dirname, 'dist'),
+},
+mode: 'production',
 };
 ```
 
@@ -49,5 +47,3 @@ const config: Configuration = {
 
 export default config;
 ```
-
-</ConfigCodeBlock >

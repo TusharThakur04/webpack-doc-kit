@@ -59,13 +59,6 @@
     mt-4;
 }
 
-.dots {
-  @apply select-none
-    tracking-widest
-    text-neutral-300
-    dark:text-neutral-600;
-}
-
 .seeMoreLink {
   @apply text-sm
     font-medium

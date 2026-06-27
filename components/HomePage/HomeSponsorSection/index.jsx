@@ -36,9 +36,6 @@ const BACKER_LIMIT = 40;
 function SeeMore({ count, href, className }) {
   return (
     <div className={classNames(styles.seeMore, className)}>
-      <span className={styles.dots} aria-hidden="true">
-        · · ·
-      </span>
       <a href={href} className={styles.seeMoreLink}>
         +{count} more (see all)
       </a>

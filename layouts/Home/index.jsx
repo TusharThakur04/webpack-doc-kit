@@ -10,7 +10,7 @@ export default ({ metadata, children }) => {
     <>
       <NavBar metadata={metadata} />
       <Hero />
-      <ConfigSection codeBlock={children} />
+      <ConfigSection>{children}</ConfigSection>
       <FeaturesSection />
       <HomeSponsorSection />
       <Footer />

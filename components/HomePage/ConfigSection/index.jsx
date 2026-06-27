@@ -7,7 +7,7 @@ const configFeatures = [
   'Long-term caching with content hashes',
 ];
 
-export default ({ codeBlock }) => {
+export default ({ children }) => {
   return (
     <section className={styles.configSection}>
       <div className={styles.container}>
@@ -24,7 +24,7 @@ export default ({ codeBlock }) => {
 
         <div className={styles.configGrid}>
           {/* rendering the code block described at root index.md*/}
-          {codeBlock}
+          {children}
           <div className={styles.features}>
             <h3 className={styles.featuresTitle}>Loaders for any input</h3>
             <p className={styles.featuresText}>
