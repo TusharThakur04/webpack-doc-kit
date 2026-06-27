@@ -3,10 +3,9 @@ layout: home
 mdx: true
 ---
 
-<Hero />
-<ConfigSection>
+<ConfigCodeBlock>
 
-```javascript
+```javascript displayName="webpack.config.js"
 // webpack.config.js
 const path = require('path');
 
@@ -20,7 +19,7 @@ module.exports = {
 };
 ```
 
-```javascript
+```javascript displayName="webpack.config.mjs"
 // webpack.config.mjs
 import path from 'path';
 
@@ -34,7 +33,7 @@ export default {
 };
 ```
 
-```typescript
+```typescript displayName="webpack.config.ts"
 // webpack.config.ts
 import path from 'path';
 import { Configuration } from 'webpack';
@@ -51,6 +50,4 @@ const config: Configuration = {
 export default config;
 ```
 
-</ConfigSection >
-<FeaturesSection />
-<HomeSponsorSection />
+</ConfigCodeBlock >

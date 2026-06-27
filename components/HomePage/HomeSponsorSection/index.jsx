@@ -1,6 +1,5 @@
 import { useMemo } from 'react';
 import classNames from 'classnames';
-import Avatar from '@node-core/ui-components/Common/AvatarGroup/Avatar';
 import BaseButton from '@node-core/ui-components/Common/BaseButton';
 
 import SectionHeader from '../../SectionHeader/index.jsx';
@@ -8,76 +7,32 @@ import SponsorTier from '../../Sponsors/Tier/index.jsx';
 import data from '#theme/sponsors' with { type: 'json' };
 
 import styles from './index.module.css';
+import BackerWall from '../../Sponsors/BackerWall/index.jsx';
 
-const OC_URL = 'https://opencollective.com/webpack';
-const OC_BASE = 'https://opencollective.com';
+import {
+  TIERS as BASE_TIERS,
+  bucketSponsors,
+  OC_URL,
+} from '../../../layouts/Sponsors/index.jsx';
+
 const SPONSORS_URL = '/about/sponsors';
 
 // Home page always ranks by monthly contribution — no sort toggle needed.
 const METRIC = 'monthly';
 
+const TIER_LIMITS = { platinum: 4, gold: 6, silver: 8, bronze: 12 };
+
 // Max cards shown per tier before the overflow "· · · +N more" row appears.
-const TIERS = [
-  {
-    tier: 'platinum',
-    label: 'Platinum',
-    price: '$2,500+ / month',
-    cardSize: 'lg',
-    limit: 4,
-  },
-  {
-    tier: 'gold',
-    label: 'Gold',
-    price: '$500 / month',
-    cardSize: 'md',
-    limit: 6,
-  },
-  {
-    tier: 'silver',
-    label: 'Silver',
-    price: '$100 / month',
-    cardSize: 'sm',
-    limit: 8,
-  },
-  {
-    tier: 'bronze',
-    label: 'Bronze',
-    price: '$10 / month',
-    cardSize: 'xs',
-    limit: 12,
-  },
-];
+const TIERS = BASE_TIERS.map(tier => ({
+  ...tier,
+  price: tier.price.monthly,
+  limit: TIER_LIMITS[tier.tier],
+}));
 
 // Max backer avatars shown before the overflow row appears.
 const BACKER_LIMIT = 40;
 
-const sortByMetric = (list, metric) =>
-  [...list].sort((a, b) => b[metric].value - a[metric].value);
-
-// Group all sponsors into tier buckets (mirrors SponsorsLayout logic).
-const bucketSponsors = (sponsors, metric) => {
-  const buckets = { platinum: [], gold: [], silver: [], bronze: [] };
-  for (const sponsor of sortByMetric(sponsors, metric)) {
-    const tier = sponsor[metric].tier;
-    if (!tier) continue;
-    buckets[tier].push(sponsor);
-  }
-  return buckets;
-};
-
-const initialsOf = name =>
-  name
-    .split(/\s+/)
-    .slice(0, 2)
-    .map(w => w[0])
-    .join('')
-    .toUpperCase();
-
-// Randomise backer wall order on every render so no backer is permanently buried.
-const shuffle = arr => [...arr].sort(() => Math.random() - 0.5);
-
 // Shared overflow indicator
-
 function SeeMore({ count, href, className }) {
   return (
     <div className={classNames(styles.seeMore, className)}>
@@ -91,7 +46,7 @@ function SeeMore({ count, href, className }) {
   );
 }
 
-export default function HomeSponsorSection() {
+export default () => {
   const buckets = useMemo(() => bucketSponsors(data.sponsors, METRIC), []);
   const hasAnySponsor = TIERS.some(({ tier }) => buckets[tier].length > 0);
 
@@ -142,21 +97,11 @@ export default function HomeSponsorSection() {
         {data.backers?.length > 0 && (
           <div className={styles.backersSection}>
             <p className={styles.backersLabel}>And the people who chip in</p>
-            <div className={styles.backerWall}>
-              {CLIENT &&
-                shuffle(data.backers)
-                  .slice(0, BACKER_LIMIT)
-                  .map(backer => (
-                    <Avatar
-                      key={backer.slug}
-                      image={backer.imageUrl}
-                      name={backer.name}
-                      nickname={backer.slug}
-                      fallback={initialsOf(backer.name)}
-                      url={`${OC_BASE}/${backer.slug}`}
-                    />
-                  ))}
-            </div>
+            <BackerWall
+              backers={data.backers}
+              limit={BACKER_LIMIT}
+              showLink={false}
+            />
             {data.backers.length > BACKER_LIMIT && (
               <SeeMore
                 count={data.backers.length - BACKER_LIMIT}
@@ -183,4 +128,4 @@ export default function HomeSponsorSection() {
       </div>
     </section>
   );
-}
+};

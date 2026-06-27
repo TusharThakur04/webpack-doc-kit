@@ -159,7 +159,7 @@
     lg:justify-end;
 }
 
-.webpackLogo {
+.logo svg {
   @apply aspect-square
     w-72
     max-w-full

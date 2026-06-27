@@ -123,7 +123,7 @@ const Features = [
   },
 ];
 
-export default function FeaturesSection() {
+export default () => {
   return (
     <section className={styles.whySection}>
       <div className={styles.container}>
@@ -148,4 +148,4 @@ export default function FeaturesSection() {
       </div>
     </section>
   );
-}
+};

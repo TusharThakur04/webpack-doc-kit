@@ -6,7 +6,7 @@ import createTailwindReader from './tailwind.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 
-const VERSION = process.env.VERSION;
+const VERSION = undefined;
 const MAJOR_VERSION = VERSION ? `v${major(VERSION)}.x` : undefined;
 const URL_PATH = VERSION ? `/docs/api/${MAJOR_VERSION}` : '/';
 
@@ -68,10 +68,7 @@ export default {
       ],
     },
     components: {
-      Hero: '#theme/Hero',
-      ConfigSection: '#theme/ConfigSection',
-      FeaturesSection: '#theme/FeaturesSection',
-      HomeSponsorSection: '#theme/HomeSponsorSection',
+      ConfigCodeBlock: '#theme/ConfigCodeBlock',
     },
     imports: {
       '#theme/local/site': VERSION
@@ -87,19 +84,9 @@ export default {
       '#theme/Navigation': join(ROOT, 'components/NavBar.jsx'),
       '#theme/Footer': join(ROOT, 'components/Footer/index.jsx'),
       '#theme/Logo': join(ROOT, 'components/Icons/Webpack.jsx'),
-
-      '#theme/Hero': join(ROOT, 'components/HomePage/Hero/index.jsx'),
-      '#theme/ConfigSection': join(
+      '#theme/ConfigCodeBlock': join(
         ROOT,
-        'components/HomePage/ConfigSection/index.jsx'
-      ),
-      '#theme/FeaturesSection': join(
-        ROOT,
-        'components/HomePage/FeaturesSection/index.jsx'
-      ),
-      '#theme/HomeSponsorSection': join(
-        ROOT,
-        'components/HomePage/HomeSponsorSection/index.jsx'
+        'components/HomePage/ConfigCodeBlock/index.jsx'
       ),
     },
     lightningcss: {

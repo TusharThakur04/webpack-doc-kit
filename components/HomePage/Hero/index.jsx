@@ -1,7 +1,7 @@
 import styles from './index.module.css';
 import { version } from '#theme/config';
-import WebpackSVG from '../../Icons/WebpackSVG';
-export default function Hero() {
+import Logo from '../../Icons/Webpack';
+export default () => {
   return (
     <section className={styles.hero}>
       <div className={styles.webpackContainer}>
@@ -60,7 +60,7 @@ export default function Hero() {
           </div>
 
           <div className={styles.logo}>
-            <WebpackSVG className={styles.webpackLogo} />
+            <Logo width="100%" height="100%" />
           </div>
         </div>
       </div>
@@ -85,4 +85,4 @@ export default function Hero() {
       </div>
     </section>
   );
-}
+};

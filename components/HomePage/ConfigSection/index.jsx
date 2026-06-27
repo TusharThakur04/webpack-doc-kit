@@ -1,12 +1,13 @@
 import styles from './index.module.css';
 
-export default function ConfigSection({ children }) {
-  const configFeatures = [
-    'Zero-config for common setups',
-    'Tree-shaking out of the box',
-    'Hot Module Replacement',
-    'Long-term caching with content hashes',
-  ];
+const configFeatures = [
+  'Zero-config for common setups',
+  'Tree-shaking out of the box',
+  'Hot Module Replacement',
+  'Long-term caching with content hashes',
+];
+
+export default ({ codeBlock }) => {
   return (
     <section className={styles.configSection}>
       <div className={styles.container}>
@@ -22,8 +23,8 @@ export default function ConfigSection({ children }) {
         </div>
 
         <div className={styles.configGrid}>
-          {/* rendering the code block */}
-          {children}
+          {/* rendering the code block described at root index.md*/}
+          {codeBlock}
           <div className={styles.features}>
             <h3 className={styles.featuresTitle}>Loaders for any input</h3>
             <p className={styles.featuresText}>
@@ -54,4 +55,4 @@ export default function ConfigSection({ children }) {
       </div>
     </section>
   );
-}
+};

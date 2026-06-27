@@ -1,13 +1,19 @@
 import Footer from '../../components/Footer';
 import NavBar from '../../components/NavBar';
+import Hero from '../../components/HomePage/Hero';
+import FeaturesSection from '../../components/HomePage/FeaturesSection';
+import HomeSponsorSection from '../../components/HomePage/HomeSponsorSection';
+import ConfigSection from '../../components/HomePage/ConfigSection';
 
-export default function Home({ metadata, children }) {
+export default ({ metadata, children }) => {
   return (
     <>
       <NavBar metadata={metadata} />
-      {/* MDX content described inside root index.md */}
-      {children}
+      <Hero />
+      <ConfigSection codeBlock={children} />
+      <FeaturesSection />
+      <HomeSponsorSection />
       <Footer />
     </>
   );
-}
+};

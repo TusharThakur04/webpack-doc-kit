@@ -97,13 +97,6 @@
     dark:text-neutral-500;
 }
 
-.backerWall {
-  @apply flex
-    flex-wrap
-    justify-center
-    gap-2;
-}
-
 .backerSeeMore {
   @apply mt-5;
 }
