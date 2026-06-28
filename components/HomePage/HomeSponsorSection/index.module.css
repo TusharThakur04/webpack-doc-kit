@@ -29,28 +29,6 @@
     gap-0;
 }
 
-.platinumStage {
-  @apply rounded-2xl
-    px-6
-    py-8;
-
-  /* blue-50 (#eff6ff) at 50% opacity */
-  background: radial-gradient(
-    ellipse 80% 60% at 50% 0%,
-    rgb(239 246 255 / 50%) 0%,
-    transparent 100%
-  );
-}
-
-:global(.dark) .platinumStage {
-  /* blue-950 (#172554) at 30% opacity */
-  background: radial-gradient(
-    ellipse 80% 60% at 50% 0%,
-    rgb(23 37 84 / 30%) 0%,
-    transparent 100%
-  );
-}
-
 .seeMore {
   @apply flex
     items-center

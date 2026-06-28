@@ -4,21 +4,19 @@ mdx: true
 ---
 
 ```javascript displayName="webpack.config.js"
-// webpack.config.js
 const path = require('path');
 
 module.exports = {
-entry: './src/index.js',
-output: {
-filename: 'bundle.js',
-path: path.resolve(\_\_dirname, 'dist'),
-},
-mode: 'production',
+  entry: './src/index.js',
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+  },
+  mode: 'production',
 };
 ```
 
 ```javascript displayName="webpack.config.mjs"
-// webpack.config.mjs
 import path from 'path';
 
 export default {
@@ -32,7 +30,6 @@ export default {
 ```
 
 ```typescript displayName="webpack.config.ts"
-// webpack.config.ts
 import path from 'path';
 import { Configuration } from 'webpack';
 

@@ -67,13 +67,7 @@ export default () => {
             const overflow = all.length - limit;
 
             return (
-              <div
-                key={tier}
-                className={classNames(
-                  styles.tierWrapper,
-                  tier === 'platinum' && styles.platinumStage
-                )}
-              >
+              <div key={tier} className={styles.tierWrapper}>
                 <SponsorTier
                   tier={tier}
                   label={label}
