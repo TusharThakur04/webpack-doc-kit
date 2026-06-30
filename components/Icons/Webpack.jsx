@@ -1,9 +1,9 @@
-export default () => (
+export default ({ width = 30, height = 30 }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 774 875.7"
-    width={30}
-    height={30}
+    width={width}
+    height={height}
   >
     <path fill="#FFF" d="M387 0l387 218.9v437.9L387 875.7 0 656.8V218.9z" />
 

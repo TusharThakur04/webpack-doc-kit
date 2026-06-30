@@ -11,8 +11,8 @@ import data from '#theme/sponsors' with { type: 'json' };
 
 import styles from './index.module.css';
 
-const OC_URL = 'https://opencollective.com/webpack';
-const TIERS = [
+export const OC_URL = 'https://opencollective.com/webpack';
+export const TIERS = [
   {
     tier: 'platinum',
     label: 'Platinum',
@@ -39,7 +39,7 @@ const TIERS = [
   },
 ];
 
-const sortByMetric = (list, metric) =>
+export const sortByMetric = (list, metric) =>
   [...list].sort((a, b) => b[metric].value - a[metric].value);
 
 /**
@@ -47,7 +47,7 @@ const sortByMetric = (list, metric) =>
  * Sponsors with no tier for the active metric (e.g. one-time backers when
  * sorting by monthly) are omitted entirely.
  */
-const bucketSponsors = (sponsors, metric) => {
+export const bucketSponsors = (sponsors, metric) => {
   const buckets = { platinum: [], gold: [], silver: [], bronze: [] };
   for (const sponsor of sortByMetric(sponsors, metric)) {
     const tier = sponsor[metric].tier;

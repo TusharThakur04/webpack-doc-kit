@@ -24,7 +24,7 @@ const shuffle = arr => [...arr].sort(() => Math.random() - 0.5);
  *   limit?: number,
  * }} props
  */
-export default ({ backers, limit = 100, ...props }) => (
+export default ({ backers, limit = 100, showLink = true, ...props }) => (
   <div {...props}>
     <div className={classNames(styles.wall)}>
       {CLIENT &&
@@ -40,13 +40,15 @@ export default ({ backers, limit = 100, ...props }) => (
             />
           ))}
     </div>
-    <a
-      href={`${OC_BASE}/webpack/contributors`}
-      target="_blank"
-      rel="noreferrer noopener"
-      className={styles.link}
-    >
-      See all backers on Open Collective &rarr;
-    </a>
+    {showLink && (
+      <a
+        href={`${OC_BASE}/webpack/contributors`}
+        target="_blank"
+        rel="noreferrer noopener"
+        className={styles.link}
+      >
+        See all backers on Open Collective &rarr;
+      </a>
+    )}
   </div>
 );

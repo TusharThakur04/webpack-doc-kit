@@ -1,0 +1,108 @@
+@reference "../../../styles/index.css";
+
+.configSection {
+  @apply flex
+    justify-center
+    w-full
+    py-20
+    border-neutral-200
+    bg-neutral-100
+    dark:border-neutral-800
+    dark:bg-[#070c13];
+}
+
+.container {
+  @apply flex
+    w-[80%]
+    max-w-7xl
+    flex-col
+    gap-3;
+}
+
+.configHeader {
+  @apply w-full
+    max-w-xl
+    text-left;
+}
+
+.preTitle {
+  @apply mb-4
+    flex
+    items-center
+    justify-center
+    text-[0.85rem]
+    font-normal
+    uppercase
+    tracking-wider
+    text-blue-600
+    dark:text-blue-500
+    lg:justify-start;
+}
+
+.title {
+  @apply text-4xl
+    mb-4;
+}
+
+.subtext {
+  @apply mb-8
+    text-lg
+    leading-relaxed
+    text-neutral-800
+    dark:text-neutral-500;
+}
+
+.configGrid {
+  @apply flex
+    w-full
+    flex-col
+    items-start
+    gap-12
+    lg:flex-row
+    lg:items-center;
+}
+
+.features {
+  @apply flex
+    flex-1
+    flex-col;
+}
+
+.featuresTitle {
+  @apply mb-4
+    text-2xl
+    font-normal
+    text-neutral-900
+    dark:text-white;
+}
+
+.featuresText {
+  @apply mb-4
+    text-base
+    leading-relaxed
+    text-neutral-600
+    dark:text-neutral-400;
+}
+
+.checkList {
+  @apply flex
+    flex-col
+    gap-3;
+}
+
+.checkItem {
+  @apply flex
+    items-center
+    gap-3
+    text-sm
+    font-medium
+    text-neutral-700
+    dark:text-neutral-300;
+}
+
+.checkIcon {
+  @apply h-5
+    w-5
+    shrink-0
+    text-blue-500;
+}

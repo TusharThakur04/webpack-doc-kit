@@ -1,0 +1,110 @@
+@reference "../../../styles/index.css";
+
+.whySection {
+  @apply flex
+    w-full
+    justify-center
+    py-20;
+}
+
+.container {
+  @apply flex
+    w-[80%]
+    max-w-7xl
+    flex-col
+    gap-3;
+}
+
+.whyHeader {
+  @apply mb-4
+    w-full
+    max-w-2xl
+    text-left;
+}
+
+.preTitle {
+  @apply mb-4
+    flex
+    items-center
+    justify-center
+    text-[0.85rem]
+    font-normal
+    uppercase
+    tracking-wider
+    text-blue-600
+    dark:text-blue-500
+    lg:justify-start;
+}
+
+.title {
+  @apply text-4xl
+    mb-4;
+}
+
+.subtext {
+  @apply mb-8
+    text-lg
+    leading-relaxed
+    text-neutral-800
+    dark:text-neutral-500;
+}
+
+.gridContainer {
+  @apply grid
+    w-full
+    grid-cols-1
+    gap-6
+    md:grid-cols-2
+    lg:grid-cols-3;
+}
+
+.card {
+  @apply flex
+    flex-col
+    items-start
+    rounded-xl
+    border
+    border-neutral-200
+    bg-white
+    p-8
+    transition-shadow
+    hover:shadow-lg
+    dark:border-neutral-800
+    dark:bg-[#0D131C]
+    dark:hover:shadow-blue-950;
+}
+
+.iconWrapper {
+  @apply mb-6
+    flex
+    h-12
+    w-12
+    items-center
+    justify-center
+    rounded-lg
+    bg-blue-50
+    text-blue-600
+    dark:bg-blue-900/30
+    dark:text-blue-400;
+}
+
+.iconWrapper svg {
+  @apply h-6
+    w-6;
+}
+
+.cardTitle {
+  @apply mb-3
+    text-lg
+    font-medium
+    text-neutral-900
+    dark:text-white;
+}
+
+.cardDesc {
+  @apply m-0
+    text-sm
+    leading-relaxed
+    text-neutral-600
+    dark:text-neutral-400;
+}
