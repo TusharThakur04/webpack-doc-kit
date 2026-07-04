@@ -33,10 +33,10 @@ export const sidebar = {
             link: `/docs/api/v${major(v)}.x`,
           })),
         },
+        ...loaders.sidebar,
+        ...plugins.sidebar,
       ],
     },
-    ...loaders.sidebar,
-    ...plugins.sidebar,
   ],
   guides: guides.sidebar,
 };
