@@ -48,5 +48,9 @@
 }
 
 .actions {
-  @apply mt-4;
+  @apply mt-4
+    justify-center
+    items-center
+    flex
+    gap-6;
 }

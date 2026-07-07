@@ -20,6 +20,12 @@ export default ({ metadata }) => {
             <BaseButton href="/" kind="primary">
               Go to Home
             </BaseButton>
+            <BaseButton
+              href="https://github.com/webpack/webpack-doc-kit/issues/new/choose"
+              kind="neutral"
+            >
+              Report an issue
+            </BaseButton>
           </div>
         </div>
       </main>
