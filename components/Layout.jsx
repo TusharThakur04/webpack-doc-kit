@@ -3,6 +3,7 @@ import HomeLayout from '../layouts/Home/index.jsx';
 import SponsorsLayout from '../layouts/Sponsors/index.jsx';
 import BlogLayout from '../layouts/Blog/index.jsx';
 import PostLayout from '../layouts/Post/index.jsx';
+import PageNotFoundLayout from '../layouts/PageNotFound/index.jsx';
 import '../styles/index.css';
 
 const LAYOUTS = {
@@ -10,6 +11,7 @@ const LAYOUTS = {
   sponsors: SponsorsLayout,
   blog: BlogLayout,
   post: PostLayout,
+  PageNotFound: PageNotFoundLayout,
 };
 
 export default function Layout(props) {
