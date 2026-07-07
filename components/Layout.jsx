@@ -11,7 +11,7 @@ const LAYOUTS = {
   sponsors: SponsorsLayout,
   blog: BlogLayout,
   post: PostLayout,
-  PageNotFound: PageNotFoundLayout,
+  404: PageNotFoundLayout,
 };
 
 export default function Layout(props) {
