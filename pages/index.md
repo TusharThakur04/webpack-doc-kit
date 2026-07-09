@@ -6,18 +6,23 @@ mdx: true
 <Hero>
 
 ```bash displayName="npm"
-npm init -y
 npm install webpack webpack-cli --save-dev
 ```
 
 ```bash displayName="yarn"
-yarn init -y
 yarn add webpack webpack-cli --dev
 ```
 
 ```bash displayName="pnpm"
-pnpm init
 pnpm add webpack webpack-cli -D
+```
+
+```bash displayName="bun"
+bun add -d webpack webpack-cli
+```
+
+```bash displayName="deno"
+deno add npm:webpack npm:webpack-cli
 ```
 
 </Hero>

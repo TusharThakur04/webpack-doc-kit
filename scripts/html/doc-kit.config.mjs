@@ -82,15 +82,15 @@ export default {
       '#theme/Navigation': join(ROOT, 'components/NavBar.jsx'),
       '#theme/Footer': join(ROOT, 'components/Footer/index.jsx'),
       '#theme/Logo': join(ROOT, 'components/Icons/Webpack.jsx'),
-      '#theme/Hero': join(ROOT, 'components/HomePage/Hero/index.jsx'),
-      '#theme/ConfigSection': join(
+      '#theme/Home/Hero': join(ROOT, 'components/HomePage/Hero/index.jsx'),
+      '#theme/Home/ConfigSection': join(
         ROOT,
         'components/HomePage/ConfigSection/index.jsx'
       ),
     },
     components: {
-      Hero: '#theme/Hero',
-      ConfigSection: '#theme/ConfigSection',
+      Hero: '#theme/Home/Hero',
+      ConfigSection: '#theme/Home/ConfigSection',
     },
     lightningcss: {
       resolver: {
