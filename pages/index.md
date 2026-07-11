@@ -3,6 +3,32 @@ layout: home
 mdx: true
 ---
 
+<Hero>
+
+```bash displayName="npm"
+npm install webpack webpack-cli --save-dev
+```
+
+```bash displayName="yarn"
+yarn add webpack webpack-cli --dev
+```
+
+```bash displayName="pnpm"
+pnpm add webpack webpack-cli -D
+```
+
+```bash displayName="bun"
+bun add -d webpack webpack-cli
+```
+
+```bash displayName="deno"
+deno add npm:webpack npm:webpack-cli
+```
+
+</Hero>
+
+<ConfigSection>
+
 ```javascript displayName="webpack.config.js"
 const path = require('path');
 
@@ -44,3 +70,5 @@ const config: Configuration = {
 
 export default config;
 ```
+
+</ConfigSection>

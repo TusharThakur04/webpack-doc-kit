@@ -1,7 +1,7 @@
 import styles from './index.module.css';
 import { version } from '#theme/config';
 import Logo from '../../Icons/Webpack';
-export default () => {
+export default ({ children }) => {
   return (
     <section className={styles.hero}>
       <div className={styles.webpackContainer}>
@@ -20,6 +20,8 @@ export default () => {
               splitting allows for loading parts of the application on demand —
               designed for modern JavaScript apps.
             </p>
+            {/* rendering the code block described at root index.md*/}
+            <div className={styles.codeWrapper}>{children}</div>
 
             <div className={styles.actions}>
               <a href="/guides/getting-started" className={styles.primaryBtn}>

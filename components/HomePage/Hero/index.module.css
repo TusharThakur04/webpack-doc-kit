@@ -40,7 +40,7 @@
 }
 
 .preTitle {
-  @apply mb-4
+  @apply mb-2
     flex
     items-center
     justify-center
@@ -64,7 +64,7 @@
 }
 
 .title {
-  @apply mb-4
+  @apply mb-2
     font-normal
     text-5xl
     leading-[1.1]
@@ -77,11 +77,20 @@
 }
 
 .subtext {
-  @apply mb-8
+  @apply mb-6
     text-lg
     leading-relaxed
     text-neutral-800
     dark:text-neutral-500;
+}
+
+.codeWrapper {
+  @apply mb-8
+    w-full
+    max-w-[26rem]
+    mx-auto
+    lg:mx-0
+    text-left;
 }
 
 .actions {
