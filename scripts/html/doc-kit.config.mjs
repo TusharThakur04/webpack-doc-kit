@@ -66,6 +66,12 @@ export default {
           rel: 'icon',
           href: '/assets/favicon.ico',
         },
+        {
+          rel: 'alternate',
+          type: 'application/rss+xml',
+          title: 'Webpack Blog',
+          href: 'https://webpack.js.org/feed.xml',
+        },
       ],
     },
     imports: {
