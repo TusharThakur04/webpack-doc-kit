@@ -20,43 +20,39 @@ function generateRSS() {
     },
   });
 
-  try {
-    const files = readdirSync(POSTS_DIR);
+  const files = readdirSync(POSTS_DIR);
 
-    const posts = files
-      .map(file => {
-        const fileContent = readFileSync(join(POSTS_DIR, file), 'utf8');
-        const { data } = matter(fileContent);
+  const posts = files
+    .map(file => {
+      const fileContent = readFileSync(join(POSTS_DIR, file), 'utf8');
+      const { data } = matter(fileContent);
 
-        // post URL
-        const postSlug = file.replace(/\.mdx?$/, '');
-        const postUrl = `${BASE_URL}/blog/posts/${postSlug}`;
+      // post URL
+      const postSlug = file.replace(/\.mdx?$/, '');
+      const postUrl = `${BASE_URL}/blog/posts/${postSlug}`;
 
-        return {
-          title: data.title,
-          link: postUrl,
-          date: data.date ? new Date(data.date) : null,
-          description: data.description || data.title,
-        };
-      })
-      // sort to keep newest blog at the top
-      .sort((a, b) => b.date.getTime() - a.date.getTime());
+      return {
+        title: data.title,
+        link: postUrl,
+        date: data.date ? new Date(data.date) : null,
+        description: data.description || data.title,
+      };
+    })
+    // sort to keep newest blog at the top
+    .sort((a, b) => b.date.getTime() - a.date.getTime());
 
-    for (const post of posts) {
-      feed.addItem({
-        title: post.title,
-        id: post.link,
-        link: post.link,
-        description: post.description,
-        date: post.date,
-      });
-    }
-
-    writeFileSync(OUTPUT_PATH, feed.rss2(), 'utf8');
-    console.log(`Successfully generated RSS feed at ${OUTPUT_PATH}`);
-  } catch (error) {
-    console.error('Failed to generate RSS feed:', error.message);
+  for (const post of posts) {
+    feed.addItem({
+      title: post.title,
+      id: post.link,
+      link: post.link,
+      description: post.description,
+      date: post.date,
+    });
   }
+
+  writeFileSync(OUTPUT_PATH, feed.rss2(), 'utf8');
+  console.log(`Successfully generated RSS feed at ${OUTPUT_PATH}`);
 }
 
 generateRSS();
