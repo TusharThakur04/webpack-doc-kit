@@ -1,4 +1,5 @@
 ---
+title: Hot Module Replacement
 authors: kryptokinght,SpaceK33z,sokra,GRardB,rouzbeh84,skipjack,avivkeller
 ---
 

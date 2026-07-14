@@ -1,4 +1,5 @@
 ---
+title: Progressive Web Application
 authors: johnnyreilly,chenxsan,EugeneHlushko,benschac,aholzner,avivkeller
 ---
 

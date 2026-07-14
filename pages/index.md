@@ -1,4 +1,5 @@
 ---
+title: Webpack
 layout: home
 mdx: true
 ---

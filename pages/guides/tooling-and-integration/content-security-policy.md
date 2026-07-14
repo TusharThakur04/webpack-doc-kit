@@ -1,4 +1,5 @@
 ---
+title: Content Security Policies
 authors: EugeneHlushko,probablyup,wizardofhogwarts,koto,avivkeller
 ---
 

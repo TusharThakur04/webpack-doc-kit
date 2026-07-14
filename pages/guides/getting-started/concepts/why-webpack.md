@@ -1,4 +1,5 @@
 ---
+title: Why webpack
 authors: debs-obrien,montogeek,jeremenichelli,EugeneHlushko,avivkeller
 ---
 

@@ -1,4 +1,5 @@
 ---
+title: Development with Vagrant
 authors: SpaceK33z,chrisVillanueva,byzyk,wizardofhogwarts,Brennvo,avivkeller
 ---
 

@@ -1,6 +1,6 @@
 ---
-layout: post
 title: Webpack 5 release
+layout: post
 date: 2020-10-10T00:00:00Z
 authors: sokra, chenxsan
 category: Release

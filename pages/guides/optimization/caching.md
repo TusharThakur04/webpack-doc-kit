@@ -1,4 +1,5 @@
 ---
+title: Caching
 authors: okonet,jouni-kantola,skipjack,dannycjones,fadysamirsadek,afontcu,rosavage,saiprasad2595,EugeneHlushko,AnayaDesign,aholzner,snitin315,avivkeller
 ---
 

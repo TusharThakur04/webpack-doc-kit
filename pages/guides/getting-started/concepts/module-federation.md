@@ -1,4 +1,5 @@
 ---
+title: Module Federation
 authors: sokra,chenxsan,EugeneHlushko,jamesgeorge007,ScriptedAlchemy,snitin315,XiaofengXie16,KyleBastien,Alevale,burhanuday,RexSkz,avivkeller
 ---
 

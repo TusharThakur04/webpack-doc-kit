@@ -1,4 +1,5 @@
 ---
+title: Advanced entry
 authors: EugeneHlushko,avivkeller
 ---
 

@@ -1,4 +1,4 @@
 ---
-layout: blog
 title: Blogs
+layout: blog
 ---

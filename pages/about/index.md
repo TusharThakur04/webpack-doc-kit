@@ -1,3 +1,7 @@
+---
+title: About webpack
+---
+
 # About webpack
 
 webpack is a static module bundler for modern JavaScript applications. It treats

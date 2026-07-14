@@ -1,4 +1,5 @@
 ---
+title: Plugins
 authors: TheLarkInn,jhnns,rouzbeh84,johnstew,MisterDev,byzyk,chenxsan,avivkeller
 ---
 

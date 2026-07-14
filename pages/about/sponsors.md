@@ -1,4 +1,4 @@
 ---
-layout: sponsors
 title: Sponsors
+layout: sponsors
 ---

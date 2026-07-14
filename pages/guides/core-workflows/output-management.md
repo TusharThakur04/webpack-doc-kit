@@ -1,4 +1,5 @@
 ---
+title: Output Management
 authors: skipjack,TheDutchCoder,sudarsangp,JGJP,EugeneHlushko,AnayaDesign,chenxsan,snitin315,Brennvo,avivkeller
 ---
 

@@ -1,4 +1,5 @@
 ---
+title: Module Resolution
 authors: pksjce,pastelsky,byzyk,EugeneHlushko,wizardofhogwarts,avivkeller
 ---
 

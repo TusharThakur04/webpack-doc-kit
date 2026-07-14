@@ -1,4 +1,5 @@
 ---
+title: Dependency Management
 authors: ndelangen,chrisVillanueva,sokra,byzyk,AnayaDesign,ThierryRakotomanana,avivkeller
 ---
 

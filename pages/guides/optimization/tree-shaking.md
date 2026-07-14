@@ -1,4 +1,5 @@
 ---
+title: Tree Shaking
 authors: simon04,zacanger,alexjoverm,avant1,MijaelWatts,dmitriid,probablyup,gish,lumo10,byzyk,pnevares,EugeneHlushko,AnayaDesign,torifat,rahul3v,snitin315,vansh5632,Brennvo,ThierryRakotomanana,avivkeller
 ---
 

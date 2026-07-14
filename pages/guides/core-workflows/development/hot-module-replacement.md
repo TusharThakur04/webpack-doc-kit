@@ -1,4 +1,5 @@
 ---
+title: Hot Module Replacement
 authors: jmreidy,jhnns,sararubin,rohannair,joshsantos,drpicox,skipjack,sbaidon,gdi2290,bdwain,caryli,xgirma,EugeneHlushko,AnayaDesign,aviyacohen,dhruvdutt,wizardofhogwarts,aholzner,snitin315,Brennvo,avivkeller
 ---
 

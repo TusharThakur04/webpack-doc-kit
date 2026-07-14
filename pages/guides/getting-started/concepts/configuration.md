@@ -1,4 +1,5 @@
 ---
+title: Configuration
 authors: TheLarkInn,simon04,EugeneHlushko,byzyk,mr-baraiya,avivkeller
 ---
 

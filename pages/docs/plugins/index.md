@@ -1,4 +1,5 @@
 ---
+title: Plugins
 authors: ryzrr
 ---
 

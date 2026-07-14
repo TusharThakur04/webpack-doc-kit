@@ -1,4 +1,5 @@
 ---
+title: Asset Management
 authors: skipjack,michael-ciniawsky,TheDutchCoder,sudarsangp,chenxsan,EugeneHlushko,AnayaDesign,wizardofhogwarts,astonizer,snitin315,Brennvo,mr-baraiya,avivkeller
 ---
 

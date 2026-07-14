@@ -1,4 +1,5 @@
 ---
+title: The Manifest
 authors: skipjack,EugeneHlushko,avivkeller
 ---
 

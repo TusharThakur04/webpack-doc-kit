@@ -1,4 +1,5 @@
 ---
+title: Lazy Loading
 authors: iammerrick,chrisVillanueva,skipjack,byzyk,EugeneHlushko,AnayaDesign,tapanprakasht,snitin315,ThierryRakotomanana,avivkeller
 ---
 

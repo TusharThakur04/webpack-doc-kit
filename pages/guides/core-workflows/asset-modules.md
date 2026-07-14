@@ -1,4 +1,5 @@
 ---
+title: Asset Modules
 authors: smelukov,EugeneHlushko,chenxsan,anshumanv,spence-s,dkdk225,alexander-akait,GreenUpOu,avivkeller
 ---
 

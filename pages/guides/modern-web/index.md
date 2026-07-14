@@ -1,4 +1,5 @@
 ---
+title: Modern Web Platform
 authors: phoekerson,avivkeller
 ---
 

@@ -1,4 +1,5 @@
 ---
+title: Code Splitting
 authors: pksjce,pastelsky,simon04,jonwheeler,johnstew,shinxi,tomtasche,levy9527,rahulcs,chrisVillanueva,rafde,bartushek,shaunwallace,skipjack,jakearchibald,TheDutchCoder,rouzbeh84,shaodahong,sudarsangp,kcolton,efreitasn,EugeneHlushko,Tiendo1011,byzyk,AnayaDesign,wizardofhogwarts,maximilianschmelzer,smelukov,chenxsan,Adarah,atesgoral,snitin315,artem-malko,Brennvo,ThierryRakotomanana,avivkeller
 ---
 

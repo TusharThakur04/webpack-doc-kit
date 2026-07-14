@@ -1,4 +1,5 @@
 ---
+title: Package exports
 authors: sokra,avivkeller
 ---
 

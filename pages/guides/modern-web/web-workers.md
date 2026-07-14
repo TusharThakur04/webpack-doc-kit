@@ -1,4 +1,5 @@
 ---
+title: Web Workers
 authors: chenxsan,avivkeller
 ---
 
