@@ -1,18 +1,14 @@
-import { readdir, readFile } from 'node:fs/promises';
 import { join } from 'node:path/posix';
 import { Application } from 'typedoc';
 import { major } from 'semver';
-
-const CACHE_DIR = join('.', '.cache', 'webpack');
+import { sources, outputDir, getPackageFile } from './utils.mjs';
 
 const generate = async packageDir => {
-  const { version } = JSON.parse(
-    await readFile(join(packageDir, 'package.json'), 'utf8')
-  );
+  const { version } = await getPackageFile(packageDir);
 
   const app = await Application.bootstrapWithPlugins({
     entryPoints: [join(packageDir, 'types.d.ts')],
-    out: join('pages', 'docs', 'api', `v${major(version)}.x`),
+    out: join(outputDir, `v${major(version)}.x`),
     publicPath: `/docs/api/v${major(version)}.x/`,
 
     plugin: [
@@ -41,14 +37,6 @@ const generate = async packageDir => {
   const project = await app.convert();
   await app.generateOutputs(project);
 };
-
-const [packageDir] = process.argv.slice(2);
-
-const sources = packageDir
-  ? [packageDir]
-  : (await readdir(CACHE_DIR, { withFileTypes: true }))
-      .filter(entry => entry.isDirectory())
-      .map(entry => join(CACHE_DIR, entry.name));
 
 for (const source of sources) {
   await generate(source);
