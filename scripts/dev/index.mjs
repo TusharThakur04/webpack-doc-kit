@@ -1,15 +1,17 @@
 import { watch, existsSync } from 'node:fs';
 import { join, extname, dirname } from 'node:path';
-import { execFile, spawn } from 'node:child_process';
+import { execFile, spawn as nativeSpawn } from 'node:child_process';
 import { promisify } from 'node:util';
+import { fileURLToPath } from 'node:url';
 
 const execFileAsync = promisify(execFile);
 
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
+
 async function runDocKit(filePath = null) {
+  const docKitBin = join(ROOT, 'node_modules', '.bin', 'doc-kit');
+
   const args = [
-    '-p',
-    '@node-core/doc-kit',
-    'doc-kit',
     'generate',
     '-t',
     'web',
@@ -33,7 +35,7 @@ async function runDocKit(filePath = null) {
     args.push('-o', outPath);
   }
 
-  await execFileAsync('npx', args, { shell: true });
+  await execFileAsync(docKitBin, args, { shell: true });
   console.log('\nBuild completed');
 }
 
@@ -83,7 +85,7 @@ const handleFileChange = (baseDir, filename) => {
     }
 
     isBuilding = false;
-  }, 150);
+  }, 500);
 };
 
 // Dynamically watch all relevant directories if they exist
@@ -98,5 +100,38 @@ for (const dir of watchDirs) {
 }
 
 // --- LOCAL SERVER ---
+
+const children = new Set();
+
+const spawn = (cmd, args) => {
+  const child = nativeSpawn(cmd, args, {
+    stdio: 'inherit',
+    shell: true,
+  });
+
+  children.add(child);
+  child.once('close', () => children.delete(child));
+  child.once('error', () => children.delete(child));
+
+  return child;
+};
+
+const cleanup = () => {
+  for (const child of children) {
+    if (!child.killed) {
+      child.kill('SIGINT');
+    }
+  }
+  process.exit();
+};
+
+process.on('SIGINT', cleanup);
+process.on('SIGTERM', cleanup);
+process.on('exit', () => {
+  for (const child of children) {
+    if (!child.killed) child.kill();
+  }
+});
+
 console.log('\nStarting local server...');
-spawn('npx', ['serve', './out'], { stdio: 'inherit', shell: true });
+spawn('npx', ['serve', './out']);
