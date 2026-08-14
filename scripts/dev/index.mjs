@@ -3,6 +3,7 @@ import { join, extname, dirname } from 'node:path';
 import { execFile, spawn as nativeSpawn } from 'node:child_process';
 import { promisify } from 'node:util';
 import { fileURLToPath } from 'node:url';
+import kill from 'tree-kill';
 
 const execFileAsync = promisify(execFile);
 
@@ -106,7 +107,8 @@ const children = new Set();
 const spawn = (cmd, args) => {
   const child = nativeSpawn(cmd, args, {
     stdio: 'inherit',
-    shell: true,
+    shell: false,
+    windowsHide: true,
   });
 
   children.add(child);
@@ -116,22 +118,51 @@ const spawn = (cmd, args) => {
   return child;
 };
 
+let shuttingDown = false;
+
 const cleanup = () => {
-  for (const child of children) {
-    if (!child.killed) {
-      child.kill('SIGINT');
+  if (shuttingDown) return;
+  shuttingDown = true;
+
+  const killTree = (pid, signal) => {
+    try {
+      kill(pid, signal);
+    } catch (error) {
+      if (error.code !== 'ESRCH') {
+        throw error;
+      }
     }
+  };
+
+  for (const child of children) {
+    killTree(child.pid, 'SIGINT');
   }
-  process.exit();
+
+  const timer = setTimeout(() => {
+    for (const child of children) {
+      killTree(child.pid, 'SIGKILL');
+    }
+
+    process.exit(1);
+  }, 5000);
+
+  const check = () => {
+    if (children.size === 0) {
+      clearTimeout(timer);
+      process.exit(0);
+    }
+  };
+
+  for (const child of children) {
+    child.once('close', check);
+  }
+
+  check();
 };
 
 process.on('SIGINT', cleanup);
 process.on('SIGTERM', cleanup);
-process.on('exit', () => {
-  for (const child of children) {
-    if (!child.killed) child.kill();
-  }
-});
 
 console.log('\nStarting local server...');
-spawn('npx', ['serve', './out']);
+const npxCmd = process.platform === 'win32' ? 'npx.cmd' : 'npx';
+spawn(npxCmd, ['serve', './out']);
